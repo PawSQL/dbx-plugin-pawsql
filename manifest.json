@@ -7,8 +7,8 @@
   "publisher": "pawsql",
   "description": "Paste SQL and get PawSQL optimization recommendations: rule violations, index DDLs, rewrites and a What-If validation report.",
   "icon": "assets/plugin.svg",
-  "source": "https://github.com/pawsql/dbx-plugin-pawsql",
-  "homepage": "https://github.com/pawsql/dbx-plugin-pawsql#readme",
+  "source": "https://github.com/PawSQL/dbx-plugin-pawsql",
+  "homepage": "https://github.com/PawSQL/dbx-plugin-pawsql#readme",
   "engines": {
     "dbx": ">=0.5.68",
     "host_api": "1"

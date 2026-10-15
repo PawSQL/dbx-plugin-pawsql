@@ -4,8 +4,8 @@
   "icon": "assets/plugin.svg",
   "tags": ["sql", "optimization", "database"],
   "permissions": ["host.events"],
-  "source": "https://github.com/pawsql/dbx-plugin-pawsql",
-  "homepage": "https://github.com/pawsql/dbx-plugin-pawsql",
+  "source": "https://github.com/PawSQL/dbx-plugin-pawsql",
+  "homepage": "https://github.com/PawSQL/dbx-plugin-pawsql",
   "license": "Apache-2.0",
   "releaseNotes": "1.0.0：首个版本。粘贴 SQL，选择数据库类型，即可获取 PawSQL 优化建议——规则违规、推荐索引、SQL 重写与 What-If 校验报告。支持匿名与账号登录两种模式。",
   "localizations": {

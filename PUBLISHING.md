@@ -23,7 +23,7 @@ cd /e/Workspace/pawsql-dbx
 #   git add -A
 #   git commit -m "Initial release"
 
-gh repo create pawsql/dbx-plugin-pawsql --public --source . --push
+gh repo create PawSQL/dbx-plugin-pawsql --public --source . --push
 git tag v1.0.0
 git push origin v1.0.0
 ```
@@ -32,7 +32,7 @@ git push origin v1.0.0
 
 ```bash
 gh release create v1.0.0 \
-  --repo pawsql/dbx-plugin-pawsql \
+  --repo PawSQL/dbx-plugin-pawsql \
   --title "v1.0.0" \
   --notes "Initial release"
 ```
@@ -42,7 +42,7 @@ gh release create v1.0.0 \
 ### 3. 回填 candidate 的 sha256/size
 
 ```bash
-gh release view v1.0.0 --repo pawsql/dbx-plugin-pawsql --json assets \
+gh release view v1.0.0 --repo PawSQL/dbx-plugin-pawsql --json assets \
   --jq '.assets[].name'
 ```
 
@@ -87,7 +87,7 @@ CI 会保持红色，报 `open candidate(s) awaiting signing`，这是预期行�
 
 ## Source repository and tag
 
-- https://github.com/pawsql/dbx-plugin-pawsql
+- https://github.com/PawSQL/dbx-plugin-pawsql
 - Built from tag v1.0.0
 
 ## Capabilities and user workflow
@@ -129,7 +129,7 @@ Apache-2.0
 
 ## Homepage or support URL
 
-https://github.com/pawsql/dbx-plugin-pawsql
+https://github.com/PawSQL/dbx-plugin-pawsql
 
 ## Confirmation
 
