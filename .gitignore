@@ -1,0 +1,26 @@
+# Go build artifacts
+backend/dbx-plugin-pawsql
+backend/dbx-plugin-pawsql.exe
+backend/*.exe
+
+# Plugin package output
+*.dbxp
+dist/
+
+# Local data / secrets
+data/
+config.json
+.env
+
+# Node tooling
+node_modules/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local dev tooling (not plugin source)
+.claude/
+.playwright-mcp/

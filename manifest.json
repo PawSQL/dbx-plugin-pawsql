@@ -1,0 +1,62 @@
+{
+  "$schema": "https://raw.githubusercontent.com/t8y2/dbx/main/plugins/manifest.schema.json",
+  "manifest_version": 1,
+  "id": "com.pawsql.dbx",
+  "name": "PawSQL SQL Optimizer",
+  "version": "1.0.0",
+  "publisher": "pawsql",
+  "description": "Paste SQL and get PawSQL optimization recommendations: rule violations, index DDLs, rewrites and a What-If validation report.",
+  "icon": "assets/plugin.svg",
+  "source": "https://github.com/pawsql/dbx-plugin-pawsql",
+  "homepage": "https://github.com/pawsql/dbx-plugin-pawsql#readme",
+  "engines": {
+    "dbx": ">=0.5.68",
+    "host_api": "1"
+  },
+  "permissions": ["host.events"],
+  "entrypoints": {
+    "backend": {
+      "protocol_versions": [1],
+      "transport": "stdio-jsonl",
+      "executable": "bin/dbx-plugin-pawsql"
+    },
+    "ui": {
+      "root": "ui",
+      "entry": "ui/index.html"
+    }
+  },
+  "contributions": [
+    {
+      "type": "workbench",
+      "id": "com.pawsql.dbx.workbench",
+      "label": "PawSQL SQL Optimizer",
+      "description": "Paste SQL and get PawSQL optimization recommendations.",
+      "icon": "assets/plugin.svg"
+    },
+    {
+      "type": "context-menu",
+      "id": "com.pawsql.dbx.connection-menu",
+      "label": "Optimize with PawSQL",
+      "description": "Open the PawSQL SQL Optimizer for this connection.",
+      "icon": "assets/plugin.svg",
+      "menu": "connection",
+      "action": { "type": "open-workbench", "workbench": "com.pawsql.dbx.workbench" }
+    }
+  ],
+  "localizations": {
+    "zh-CN": {
+      "name": "PawSQL SQL 优化器",
+      "description": "粘贴 SQL，获取 PawSQL 优化建议：规则违规、推荐索引、SQL 重写与 What-If 校验报告。",
+      "contributions": {
+        "com.pawsql.dbx.workbench": {
+          "label": "PawSQL SQL 优化器",
+          "description": "粘贴 SQL，获取 PawSQL 优化建议。"
+        },
+        "com.pawsql.dbx.connection-menu": {
+          "label": "用 PawSQL 优化",
+          "description": "针对该连接打开 PawSQL SQL 优化器。"
+        }
+      }
+    }
+  }
+}

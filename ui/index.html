@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PawSQL SQL Optimizer</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div class="hc-app" id="app">
+      <header class="hc-topbar">
+        <div class="hc-brand">
+          <span class="hc-brand-mark">P</span>
+          <span id="brand-name">PawSQL SQL Optimizer</span>
+        </div>
+      </header>
+
+      <main class="hc-main">
+        <section class="hc-input">
+          <label class="hc-field">
+            <span class="hc-field-label" id="label-sql">SQL text</span>
+            <textarea id="sql-input" class="hc-textarea" rows="10" spellcheck="false"
+                      placeholder="Paste the SQL statement to optimize…"></textarea>
+          </label>
+
+          <div class="hc-input-row hc-input-row-actions">
+            <label class="hc-field hc-field-inline" id="dbtype-row">
+              <span class="hc-field-label" id="label-dbtype">Database type</span>
+              <select id="dbtype-select" class="hc-select"></select>
+            </label>
+            <div class="hc-field hc-field-inline" id="workspace-row" hidden>
+              <span class="hc-field-label" id="label-workspace">Workspace</span>
+              <select id="workspace-select" class="hc-select"></select>
+              <button class="hc-btn hc-btn-ghost" id="btn-refresh-workspaces" type="button">Refresh</button>
+            </div>
+            <button class="hc-btn hc-btn-primary" id="btn-optimize" type="button">Optimize</button>
+          </div>
+          <div class="hc-hint" id="detected-dbtype"></div>
+          <div class="hc-hint" id="workspace-hint"></div>
+
+          <div class="hc-progress" id="progress-line" role="status"></div>
+        </section>
+
+        <section class="hc-config" id="config-pane">
+          <div class="hc-config-head">
+            <h2 id="config-title">Configuration</h2>
+            <button class="hc-btn hc-btn-ghost" id="btn-toggle-config" type="button">Expand configuration</button>
+          </div>
+
+          <div class="hc-config-body" id="config-body" hidden>
+            <div class="hc-config-row">
+              <label class="hc-field hc-field-grow">
+                <span class="hc-field-label" id="label-server-url">Server URL</span>
+                <input id="cfg-server-url" class="hc-input" type="text" spellcheck="false"
+                       placeholder="https://www.pawsql.com" />
+              </label>
+              <label class="hc-field hc-field-inline hc-check">
+                <input id="cfg-anonymous" type="checkbox" checked />
+                <span id="label-anonymous">Anonymous</span>
+              </label>
+            </div>
+            <div class="hc-hint" id="auth-status"></div>
+
+            <div class="hc-grid">
+              <label class="hc-field">
+                <span class="hc-field-label" id="label-email">Email</span>
+                <input id="cfg-email" class="hc-input" type="email" spellcheck="false" autocomplete="off" />
+              </label>
+              <label class="hc-field">
+                <span class="hc-field-label" id="label-password">Password</span>
+                <input id="cfg-password" class="hc-input" type="password" spellcheck="false" autocomplete="off" />
+              </label>
+            </div>
+            <div class="hc-actions">
+              <button class="hc-btn hc-btn-ghost" id="btn-test" type="button">Test Connection</button>
+              <button class="hc-btn hc-btn-primary" id="btn-signin" type="button">Sign in</button>
+              <button class="hc-btn hc-btn-ghost" id="btn-signout" type="button" hidden>Sign out</button>
+            </div>
+
+            <h3 class="hc-group-title" id="label-opt-group">Optimization options</h3>
+            <div class="hc-grid hc-grid-checks">
+              <label class="hc-field hc-check"><input id="cfg-validate" type="checkbox" checked /><span id="label-validate">Validate performance (What-If)</span></label>
+              <label class="hc-field hc-check"><input id="cfg-analyze" type="checkbox" checked /><span id="label-analyze">Explain analyze</span></label>
+              <label class="hc-field hc-check"><input id="cfg-rewrite" type="checkbox" checked /><span id="label-rewrite">Suggest query rewrites</span></label>
+              <label class="hc-field hc-check"><input id="cfg-dedup" type="checkbox" checked /><span id="label-dedup">Deduplicate recommended indexes</span></label>
+              <label class="hc-field hc-check"><input id="cfg-index-only" type="checkbox" checked /><span id="label-index-only">Index-advice only</span></label>
+              <label class="hc-field hc-check"><input id="cfg-update-stats" type="checkbox" checked /><span id="label-update-stats">Update statistics before validation</span></label>
+            </div>
+
+            <div class="hc-actions">
+              <button class="hc-btn hc-btn-ghost" id="btn-save" type="button">Save configuration</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="hc-report" id="report-pane" aria-live="polite"></section>
+      </main>
+
+      <div class="hc-toasts" id="toast-host"></div>
+    </div>
+
+    <script src="i18n.js"></script>
+    <script src="util.js"></script>
+    <script src="bridge.js"></script>
+    <script src="report.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
