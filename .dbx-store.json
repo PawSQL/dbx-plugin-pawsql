@@ -1,7 +1,7 @@
 {
   "name": "PawSQL Optimizer",
   "description": "Paste SQL and get PawSQL optimization recommendations: rule violations, index DDLs, rewrites and a What-If validation report.",
-  "icon": "assets/plugin.svg",
+  "icon": "assets/plugin.png",
   "tags": ["sql", "optimization", "database"],
   "permissions": ["host.events"],
   "source": "https://github.com/PawSQL/dbx-plugin-pawsql",

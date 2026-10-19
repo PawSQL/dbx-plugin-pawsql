@@ -6,7 +6,7 @@
   "version": "1.0.0",
   "publisher": "pawsql",
   "description": "Paste SQL and get PawSQL optimization recommendations: rule violations, index DDLs, rewrites and a What-If validation report.",
-  "icon": "assets/plugin.svg",
+  "icon": "assets/plugin.png",
   "source": "https://github.com/PawSQL/dbx-plugin-pawsql",
   "homepage": "https://github.com/PawSQL/dbx-plugin-pawsql#readme",
   "engines": {
@@ -31,14 +31,14 @@
       "id": "com.pawsql.dbx.workbench",
       "label": "PawSQL SQL Optimizer",
       "description": "Paste SQL and get PawSQL optimization recommendations.",
-      "icon": "assets/plugin.svg"
+      "icon": "assets/plugin.png"
     },
     {
       "type": "context-menu",
       "id": "com.pawsql.dbx.connection-menu",
       "label": "Optimize with PawSQL",
       "description": "Open the PawSQL SQL Optimizer for this connection.",
-      "icon": "assets/plugin.svg",
+      "icon": "assets/plugin.png",
       "menu": "connection",
       "action": { "type": "open-workbench", "workbench": "com.pawsql.dbx.workbench" }
     }

@@ -143,8 +143,8 @@ https://github.com/PawSQL/dbx-plugin-pawsql
 
 ## 本地已完成的修改清单
 
-- `dbx-store/candidates/com.pawsql.dbx.json`：`permissions` → `["host.events"]`；`source` → tag 寻址 `…/tree/v1.0.0`；`icon` → pin 到 `…/v1.0.0/assets/plugin.svg`。
-- `pawsql-dbx/manifest.json`、`.dbx-store.json`：图标统一从占位 `assets/plugin.png` 改为 DBeaver 爪印 `assets/plugin.svg`（DBX manifest 的 `icon` 字段 schema 允许任意相对资源路径，SVG 合法）。
-- `pawsql-dbx/README.md`：布局说明同步更新为 `assets/plugin.svg`。
-- `pawsql-dbx/assets/plugin.png`：已删除（旧占位图，现无引用）。
+- `dbx-store/candidates/com.pawsql.dbx.json`：`permissions` → `["host.events"]`；`source` → tag 寻址 `…/tree/v1.0.0`；`icon` → pin 到 `…/v1.0.0/assets/plugin.png`。
+- `pawsql-dbx/manifest.json`、`.dbx-store.json`：图标统一为 `assets/plugin.png`。
+- `pawsql-dbx/README.md`：布局说明同步更新为 `assets/plugin.png`。
+- `pawsql-dbx/assets/plugin.png`：图标文件（51×51 PNG）。
 - `pawsql-dbx/.gitignore`：追加 `.claude/`、`.playwright-mcp/`。

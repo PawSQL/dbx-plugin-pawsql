@@ -26,7 +26,7 @@ and returns a normalized report; the frontend only renders it.
 manifest.json            DBX plugin manifest (id/publisher/version/permissions/entrypoints)
 dbx-plugin.toml          packaging config for @dbx-app/plugin-cli
 .dbx-store.json          first-submission store metadata (optional)
-assets/plugin.svg       icon (DBeaver paw print)
+assets/plugin.png       icon (DBeaver paw print)
 ui/                      workbench (index.html, app.css, i18n.js, util.js, bridge.js, report.js, app.js)
 backend/                 Go sidecar (main.go, pawsql.go, config.go, pawsql_test.go)
 .github/workflows/       release workflow
